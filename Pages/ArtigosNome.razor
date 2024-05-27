@@ -1,22 +1,46 @@
 @page "/artigos/{name}"
+@inject HttpClient Http
 @using SociedadeTecnologia.Components
 @using SociedadeTecnologia.Entities
 
-<MudText Typo="Typo.h4">
-    @Title
-</MudText>
-<MudText Typo="Typo.h6">
-    @Lead
-</MudText>
-<div>@HtmlText</div>
-<AuthorComponent Author=@Author/>
+@if(@article is null)
+{
+    <h1>404 - Página não encontrada</h1>
+}
+else
+{
+    <MudText Typo="Typo.h4">
+        @article.Title
+    </MudText>
+    <MudText Typo="Typo.h6">
+        @article.Lead
+    </MudText>
+    <div>@((MarkupString)article.HtmlText)</div>
+    <AuthorComponent Author=@article.Author/>
+}
+    
 
 @code
 {
     [Parameter]
     public string? Name { get; set; }
-    public string? Title { get; set; }
-    public string? Lead { get; set; }
-    public string? HtmlText { get; set; }
-    public Author Author { get; set; } = new Author("", "", "");
+    public Article? article { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var articles = await Http.GetFromJsonAsync<Article[]>("articles.json");
+        
+        if(articles != null)
+            article = articles.FirstOrDefault<Article>();
+    }
+
+
+    public class Article
+    {
+        public string? Title { get; set; }
+        public string? Lead { get; set; }
+        public string HtmlText { get; set; } = "";
+        public Author Author { get; set; } = new Author("", "", "", "", "");
+    }
+
 }

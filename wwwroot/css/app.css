@@ -59,3 +59,12 @@
     .loading-progress-text:after {
         content: var(--blazor-load-percentage-text, "Loading");
     }
+
+.participante {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.resposta {
+    margin-left: 20px;
+}

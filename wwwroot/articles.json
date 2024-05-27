@@ -1,0 +1,14 @@
+[
+    {
+        "title": "sample",
+        "lead": "sample",
+        "htmlText": "<h1>Entrevista</h1><h2>Participantes<ul><li class='participante'>Entrevistador</li><li class='participante'>Entrevistado</li></ul></h2><h2>Transcrição<p class='participante'>Entrevistador:</p><p class='resposta'>Boa tarde, obrigado por aceitar participar desta entrevista.</p><p class='participante'>Entrevistado:</p><p class='resposta'>Boa tarde, o prazer é meu.</p><p class='participante'>Entrevistador:</p><p class='resposta'>Para começar, poderia se apresentar e falar um pouco sobre sua trajetória profissional?</p><p class='participante'>Entrevistado:</p><p class='resposta'>Meu nome é [Nome do Entrevistado] e sou [Cargo do Entrevistado] na empresa [Nome da Empresa]. Sou formado em [Formação Acadêmica] e trabalho na área de [Área de Atuação] há [Tempo de Experiência] anos. Ao longo da minha carreira, tive a oportunidade de trabalhar em diversos projetos desafiadores e aprendi muito com cada um deles.</p><p class='participante'>Entrevistador:</p><p class='resposta'>Que legal! E quais são seus principais desafios e conquistas na sua área de atuação?</p><p class='participante'>Entrevistado:</p><p class='resposta'>Um dos meus maiores desafios é me manter atualizado com as constantes mudanças do mercado. A área de [Área de Atuação] é muito dinâmica e exige que os profissionais estejam sempre aprendendo coisas novas. Uma das minhas maiores conquistas foi [Descrever Conquista Profissional].</p><p class='participante'>Entrevistador:</p><p class='resposta'>Com certeza essa foi uma grande conquista! E quais são seus planos para o futuro?</p><p class='participante'>Entrevistado:</p><p class='resposta'>Pretendo continuar crescendo profissionalmente na minha área e me tornar um especialista reconhecido. Também tenho planos de [Descrever Plano para o Futuro].</p><p class='participante'>Entrevistador:</p><p class='resposta'>Desejo muito sucesso em seus planos! Para finalizar, você teria algum conselho para quem está começando a carreira na área de [Área de Atuação]?</p><p class='participante'>Entrevistado:</p><p class='resposta'>Sim, com certeza. Eu diria que é importante se dedicar aos estudos, estar sempre buscando novas oportunidades de aprendizado e networking, e não ter medo de enfrentar desafios. É importante também ter iniciativa e proatividade, e sempre buscar se destacar pelo seu trabalho.</p><p class='participante'>Entrevistador:</p><p class='resposta'>São ótimas dicas! Muito obrigado por sua participação na entrevista.</p><p class='participante'>Entrevistado:</p><p class='resposta'>De nada, foi um prazer conversar com você.</p>",
+        "author": {
+            "name": "Juan Marques",
+            "about": "blabla",
+            "description": "blabla blabla blabla blabla",
+            "avatarUrl": "/",
+            "imageUrl": "/"
+        }
+    }
+]
