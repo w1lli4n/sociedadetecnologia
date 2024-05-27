@@ -1,7 +1,15 @@
 ﻿@page "/"
+@using SociedadeTecnologia.Components
 
 <PageTitle>Home</PageTitle>
 
-<h1>Hello, world!</h1>
+<Hero />
 
-Welcome to your new app.
+<MainCard Title="Entrevista com -----" />
+
+<div class="d-flex my-6 flex-wrap flex-md-nowrap gap-2">
+    <ArticleCards />
+    <ArticleCards />
+    <ArticleCards />
+</div>
+
