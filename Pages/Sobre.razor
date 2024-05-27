@@ -1,0 +1,23 @@
+@page "/sobre"
+@using SociedadeTecnologia.Components
+@using SociedadeTecnologia.Entities;
+
+<MudText Typo="Typo.h2">
+    Sobre o projeto
+</MudText>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi voluptates nulla iste libero. Accusantium officiis magnam perferendis, error veritatis possimus qui, quibusdam quod distinctio assumenda ratione similique. Voluptas, alias praesentium.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi voluptates nulla iste libero. Accusantium officiis magnam perferendis, error veritatis possimus qui, quibusdam quod distinctio assumenda ratione similique. Voluptas, alias praesentium.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi voluptates nulla iste libero. Accusantium officiis magnam perferendis, error veritatis possimus qui, quibusdam quod distinctio assumenda ratione similique. Voluptas, alias praesentium.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi voluptates nulla iste libero. Accusantium officiis magnam perferendis, error veritatis possimus qui, quibusdam quod distinctio assumenda ratione similique. Voluptas, alias praesentium.
+<MudText Typo="Typo.h2">
+    Sobre os autores
+</MudText>
+<AuthorCard Author=@Author/>
+<AuthorCard />
+<AuthorCard />
+<AuthorCard />
+
+@code
+{
+    public Author Author = new Author("Name", "", "Description", "", "ImagePath");
+}    
