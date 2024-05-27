@@ -1,0 +1,20 @@
+@using SociedadeTecnologia.Entities
+<MudItem>
+    <MudAvatar>
+        <MudImage Src=@Author.AvatarPath Alt="autor"></MudImage>
+    </MudAvatar>
+
+    <MudText Typo="Typo.button">
+        <strong>@Author.Name</strong>
+    </MudText>
+
+    <MudText Typo="Typo.caption">
+        @Author.About
+    </MudText>
+</MudItem>
+
+@code 
+{
+    [Parameter]
+    public Author Author { get; set; } = new Author("", "", "");
+}

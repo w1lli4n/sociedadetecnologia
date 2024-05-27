@@ -1,0 +1,15 @@
+@page "/artigos"
+@using SociedadeTecnologia.Components
+@using SociedadeTecnologia.Entities
+
+<div class="d-flex flex-column gap-8 my-8">
+    <MainCard Title="Entrevista com Fulana" IsAuthor=true Author=@Juan/>
+    <MainCard />
+    <MainCard />
+    <MainCard />
+</div>
+
+@code
+{
+    Author Juan = new Author("Juan", "blablabla blablabla blablabla", "images/avatar/juan.jpg");
+}    

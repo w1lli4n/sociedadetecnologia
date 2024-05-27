@@ -1,3 +1,5 @@
+@using SociedadeTecnologia.Entities
+
 <MudCard>
     <MudCardMedia Image=@ImagePath Alt="Tecnologias assistivas" Fluid="true" ObjectFit="ObjectFit.Cover"/>
     <MudCardContent>
@@ -5,7 +7,12 @@
         <MudText Typo="Typo.body2">@Lead</MudText>
     </MudCardContent>
     <MudCardActions>
-                <MudLink Href=@Path Underline="Underline.None" Color="Color.Secondary" Class="mr-4">Leia mais</MudLink>
+        <MudLink Href=@Path Underline="Underline.None" Color="Color.Secondary" Class="mr-4">Leia mais</MudLink>
+        @if(@IsAuthor)
+        {
+            <MudSpacer />
+            <AuthorComponent Author=@Author/>
+        }
     </MudCardActions>
 </MudCard>
 
@@ -19,4 +26,8 @@
     public string? Path { get; set ; } = "/artigos/#";
     [Parameter]
     public string? ImagePath { get; set; } = "images/tecnologias-assistivas.jpeg";
+    [Parameter]
+    public bool IsAuthor { get; set; } = false;
+    [Parameter]
+    public Author Author { get; set; } = new Author("", "", "");
 }

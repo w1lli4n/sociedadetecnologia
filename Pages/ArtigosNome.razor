@@ -1,0 +1,22 @@
+@page "/artigos/{name}"
+@using SociedadeTecnologia.Components
+@using SociedadeTecnologia.Entities
+
+<MudText Typo="Typo.h4">
+    @Title
+</MudText>
+<MudText Typo="Typo.h6">
+    @Lead
+</MudText>
+<div>@HtmlText</div>
+<AuthorComponent Author=@Author/>
+
+@code
+{
+    [Parameter]
+    public string? Name { get; set; }
+    public string? Title { get; set; }
+    public string? Lead { get; set; }
+    public string? HtmlText { get; set; }
+    public Author Author { get; set; } = new Author("", "", "");
+}
