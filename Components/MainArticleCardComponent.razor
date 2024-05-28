@@ -6,7 +6,7 @@
         <MudText Typo="Typo.body2">@Article.Lead</MudText>
     </MudCardContent>
     <MudCardActions>
-        <MudLink Href=@($"/sociedadetecnologia/{Article.Path}") Underline="Underline.None" Color="Color.Secondary" Class="mr-4">Leia mais</MudLink>
+        <MudLink Href=@($"/sociedadetecnologia{Article.Path}") Underline="Underline.None" Color="Color.Secondary" Class="mr-4">Leia mais</MudLink>
         <MudSpacer />
         <AuthorComponent Author=@Article.Author/>
     </MudCardActions>
