@@ -1,0 +1,18 @@
+@using SociedadeTecnologia.Models
+
+<MudCard Style="width: 100%">
+    <MudCardMedia Image=@Article.ImagePath Height="200" />
+    <MudCardContent>
+        <MudText Typo="Typo.h5">@Article.Title</MudText>
+        <MudText Typo="Typo.body2">@Article.Lead</MudText>
+    </MudCardContent>
+    <MudCardActions>
+        <MudLink Href=@Article.Path Underline="Underline.None" Color="Color.Secondary" Class="mr-4">Leia mais</MudLink>
+    </MudCardActions>
+</MudCard>
+
+@code
+{
+    [Parameter] public Article Article { get; set; } = new Article("", "", "", "", 
+        new Author("", "", "", ""));
+}

@@ -1,15 +1,34 @@
 ﻿@page "/"
+@inject HttpClient Http
 @using SociedadeTecnologia.Components
+@using SociedadeTecnologia.Models
 
 <PageTitle>Home</PageTitle>
 
-<Hero />
+<HeroComponent />
 
-<MainCard Title="Entrevista com -----" />
+@if (@Articles is null)
+{
+    <h1>Carregando...</h1>
+}
+else
+{
+    <MainArticleCardComponent Article=@Articles[0] />
+    
+    <div class="d-flex my-6 flex-wrap flex-md-nowrap gap-4 justify-space-between" style="flex: 0 0 33.3333%;">
+        @for (int i = 1; i < 4; i++)
+        {
+            <ArticleCardComponent Article=@Articles[i]/>
+        }
+    </div>
+}
 
-<div class="d-flex my-6 flex-wrap flex-md-nowrap gap-4">
-    <ArticleCards />
-    <ArticleCards />
-    <ArticleCards />
-</div>
-
+@code
+{
+    private Article[]? Articles { get; set; }
+    
+    protected override async Task OnInitializedAsync()
+    {
+        Articles = await Http.GetFromJsonAsync<Article[]>("articles.json");
+    }
+}

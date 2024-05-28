@@ -1,14 +1,54 @@
 [
     {
-        "title": "sample",
-        "lead": "sample",
-        "htmlText": "<h1>Entrevista</h1><h2>Participantes<ul><li class='participante'>Entrevistador</li><li class='participante'>Entrevistado</li></ul></h2><h2>Transcrição<p class='participante'>Entrevistador:</p><p class='resposta'>Boa tarde, obrigado por aceitar participar desta entrevista.</p><p class='participante'>Entrevistado:</p><p class='resposta'>Boa tarde, o prazer é meu.</p><p class='participante'>Entrevistador:</p><p class='resposta'>Para começar, poderia se apresentar e falar um pouco sobre sua trajetória profissional?</p><p class='participante'>Entrevistado:</p><p class='resposta'>Meu nome é [Nome do Entrevistado] e sou [Cargo do Entrevistado] na empresa [Nome da Empresa]. Sou formado em [Formação Acadêmica] e trabalho na área de [Área de Atuação] há [Tempo de Experiência] anos. Ao longo da minha carreira, tive a oportunidade de trabalhar em diversos projetos desafiadores e aprendi muito com cada um deles.</p><p class='participante'>Entrevistador:</p><p class='resposta'>Que legal! E quais são seus principais desafios e conquistas na sua área de atuação?</p><p class='participante'>Entrevistado:</p><p class='resposta'>Um dos meus maiores desafios é me manter atualizado com as constantes mudanças do mercado. A área de [Área de Atuação] é muito dinâmica e exige que os profissionais estejam sempre aprendendo coisas novas. Uma das minhas maiores conquistas foi [Descrever Conquista Profissional].</p><p class='participante'>Entrevistador:</p><p class='resposta'>Com certeza essa foi uma grande conquista! E quais são seus planos para o futuro?</p><p class='participante'>Entrevistado:</p><p class='resposta'>Pretendo continuar crescendo profissionalmente na minha área e me tornar um especialista reconhecido. Também tenho planos de [Descrever Plano para o Futuro].</p><p class='participante'>Entrevistador:</p><p class='resposta'>Desejo muito sucesso em seus planos! Para finalizar, você teria algum conselho para quem está começando a carreira na área de [Área de Atuação]?</p><p class='participante'>Entrevistado:</p><p class='resposta'>Sim, com certeza. Eu diria que é importante se dedicar aos estudos, estar sempre buscando novas oportunidades de aprendizado e networking, e não ter medo de enfrentar desafios. É importante também ter iniciativa e proatividade, e sempre buscar se destacar pelo seu trabalho.</p><p class='participante'>Entrevistador:</p><p class='resposta'>São ótimas dicas! Muito obrigado por sua participação na entrevista.</p><p class='participante'>Entrevistado:</p><p class='resposta'>De nada, foi um prazer conversar com você.</p>",
+        "title": "artigo-1",
+        "lead": "Lead para o artigo 1",
+        "path": "/artigos/artigo-1",
+        "imagePath": "images/articles/tecnologias-assistivas.jpeg",
+        "htmlText": "<article><header><h1>The Future of Technology</h1><p>by Jane Doe</p></header><p>The rapid advancement of technology continues to transform our world in unprecedented ways. From artificial intelligence to quantum computing, the future looks promising yet challenging.</p><p>Innovations are driving significant changes across various sectors. Automation and AI are enhancing productivity, while also raising ethical concerns about job displacement and privacy.</p><footer><p>Published on May 28, 2024</p></footer></article>",
         "author": {
             "name": "Juan Marques",
-            "about": "blabla",
-            "description": "blabla blabla blabla blabla",
-            "avatarUrl": "/",
-            "imageUrl": "/"
+            "about": "Aspirante a desenvolvedor backend C++",
+            "avatarUrl": "images/authors/avatars/juan.jpeg",
+            "imageUrl": "images/authors/juan.jpeg"
+        }
+    },
+    {
+        "title": "artigo-2",
+        "lead": "Lead para o artigo 2",
+        "path": "/artigos/artigo-2",
+        "imagePath": "images/articles/tecnologias-assistivas.jpeg",
+        "htmlText": "<article><header><h1>Climate Change and Its Impact</h1><p>by John Smith</p></header><p>Climate change is one of the most pressing issues of our time. Rising temperatures, melting ice caps, and extreme weather events are becoming more frequent and severe.</p><p>Efforts to mitigate climate change include reducing carbon emissions, transitioning to renewable energy sources, and protecting natural ecosystems.</p><footer><p>Published on May 28, 2024</p></footer></article>",
+        "author": {
+            "name": "Lucas Araújo",
+            "about": "Aspirante a desenvolvedor backend Python",
+            "avatarUrl": "images/authors/avatars/lucas.jpeg",
+            "imageUrl": "images/authors/lucas.jpeg"
+        }
+    },
+    {
+        "title": "artigo-3",
+        "lead": "Lead para o artigo 3",
+        "path": "/artigos/artigo-3",
+        "imagePath": "images/articles/tecnologias-assistivas.jpeg",
+        "htmlText": "<article><header><h1>The Evolution of Healthcare</h1><p>by Emily Johnson</p></header><p>Healthcare is evolving rapidly, driven by technological advancements and a better understanding of human biology. Personalized medicine, telehealth, and genomic research are revolutionizing patient care.</p><p>Challenges remain in ensuring access to these advancements for all individuals, regardless of socioeconomic status.</p><footer><p>Published on May 28, 2024</p></footer></article>",
+        "author": {
+            "name": "Murilo Roseni",
+            "about": "Aspirante a analista de dados",
+            "avatarUrl": "images/authors/avatars/murilo.jpeg",
+            "imageUrl": "images/authors/murilo.jpeg"
+        }
+    },
+    {
+        "title": "artigo-4",
+        "lead": "Lead para o artigo 4",
+        "path": "/artigos/artigo-4",
+        "imagePath": "images/articles/tecnologias-assistivas.jpeg",
+        "htmlText": "<article><header><h1>The Rise of Remote Work</h1><p>by Michael Brown</p></header><p>The COVID-19 pandemic has accelerated the adoption of remote work. Companies and employees alike are discovering the benefits and challenges of working from home.</p><p>While remote work offers flexibility and can increase productivity, it also requires new approaches to management and communication.</p><footer><p>Published on May 28, 2024</p></footer></article>",
+        "author": {
+            "name": "Willian dos Santos",
+            "about": "Aspirante a desenvolvedor fullstack dotnet",
+            "avatarUrl": "images/authors/avatars/willian.jpeg",
+            "imageUrl": "images/authors/willian.jpeg"
         }
     }
 ]

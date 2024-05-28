@@ -1,23 +1,40 @@
 @page "/sobre"
+@inject HttpClient Http
 @using SociedadeTecnologia.Components
-@using SociedadeTecnologia.Entities;
+@using SociedadeTecnologia.Models
 
-<MudText Typo="Typo.h2">
+<MudText Typo="Typo.h3">
     Sobre o projeto
 </MudText>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi voluptates nulla iste libero. Accusantium officiis magnam perferendis, error veritatis possimus qui, quibusdam quod distinctio assumenda ratione similique. Voluptas, alias praesentium.
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi voluptates nulla iste libero. Accusantium officiis magnam perferendis, error veritatis possimus qui, quibusdam quod distinctio assumenda ratione similique. Voluptas, alias praesentium.
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi voluptates nulla iste libero. Accusantium officiis magnam perferendis, error veritatis possimus qui, quibusdam quod distinctio assumenda ratione similique. Voluptas, alias praesentium.
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi voluptates nulla iste libero. Accusantium officiis magnam perferendis, error veritatis possimus qui, quibusdam quod distinctio assumenda ratione similique. Voluptas, alias praesentium.
-<MudText Typo="Typo.h2">
+<MudText Typo="Typo.h6">
+    <p>Um trabalho de Sociedade e Tecnologia, matéria ministrada pela professora Karina Oliveira, na Fatec Americana, 1º semestre de 2024, ao curso de ADS.</p>
+    <p>Trabalho realizado por Juan Marques, Lucas Araujo, Murilo Roseni e Willian dos Santos.</p>
+</MudText>
+    
+<MudText Typo="Typo.h3">
     Sobre os autores
 </MudText>
-<AuthorCard Author=@Author/>
-<AuthorCard />
-<AuthorCard />
-<AuthorCard />
+
+@if (@Authors is null)
+{
+    <h1>Carregando...</h1>
+}
+else
+{
+    <div class="d-flex flex-column gap-8">
+        @foreach (var author in @Authors)
+        {
+            <AuthorCardComponent Author=@author/>
+        }
+    </div>
+}
 
 @code
 {
-    public Author Author = new Author("Name", "", "Description", "", "ImagePath");
+    private Author[]? Authors { get; set; }
+    
+    protected override async Task OnInitializedAsync()
+    {
+        Authors = await Http.GetFromJsonAsync<Author[]>("authors.json");
+    }
 }    

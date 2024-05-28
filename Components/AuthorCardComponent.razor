@@ -1,14 +1,13 @@
-@using SociedadeTecnologia.Entities
+@using SociedadeTecnologia.Models
 <MudCard>
     <MudCardMedia Image=@Author.ImagePath Alt="Autor" Height="200" Width="300" />
     <MudCardContent>
         <MudText Typo="Typo.h5">@Author.Name</MudText>
-        <MudText Typo="Typo.body2">@Author.Description</MudText>
+        <MudText Typo="Typo.body2">@Author.About</MudText>
     </MudCardContent>
 </MudCard>
 
 @code
 {
-    [Parameter]
-    public Author Author { get; set; } = new Author("", "", "");
+    [Parameter] public Author Author { get; set; } = new Author("", "", "", "");
 }

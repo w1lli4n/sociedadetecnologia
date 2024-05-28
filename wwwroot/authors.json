@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Juan Marques",
+    "about": "Aspirante a desenvolvedor backend C++",
+    "avatarUrl": "images/authors/avatars/juan.jpeg",
+    "imageUrl": "images/authors/juan.jpeg"
+  },
+  {
+    "name": "Lucas Araújo",
+    "about": "Aspirante a desenvolvedor backend Python",
+    "avatarUrl": "images/authors/avatars/lucas.jpeg",
+    "imageUrl": "images/authors/lucas.jpeg"
+  },
+  {
+    "name": "Murilo Roseni",
+    "about": "Aspirante a analista de dados",
+    "avatarUrl": "images/authors/avatars/murilo.jpeg",
+    "imageUrl": "images/authors/murilo.jpeg"
+  },
+  {
+    "name": "Willian dos Santos",
+    "about": "Aspirante a desenvolvedor fullstack dotnet",
+    "avatarUrl": "images/authors/avatars/willian.jpeg",
+    "imageUrl": "images/authors/willian.jpeg"
+  }
+]

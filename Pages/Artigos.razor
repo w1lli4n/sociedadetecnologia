@@ -1,15 +1,29 @@
 @page "/artigos"
+@inject HttpClient Http
 @using SociedadeTecnologia.Components
-@using SociedadeTecnologia.Entities
+@using SociedadeTecnologia.Models
 
 <div class="d-flex flex-column gap-8 my-8">
-    <MainCard Title="Entrevista com Fulana" IsAuthor=true Author=@Juan Path="/sociedadetecnologia/artigos/sample"/>
-    <MainCard />
-    <MainCard />
-    <MainCard />
+    @if (Articles is null)
+    {
+        <h1>Carregando...</h1>
+    }
+    else
+    {
+        @foreach (var article in Articles)
+        {
+            <MainArticleCardComponent Article=@article/>
+        }
+    }
+    
 </div>
 
 @code
 {
-    Author Juan = new Author("Juan", "blablabla blablabla blablabla", "images/avatar/juan.jpg");
+    private Article[]? Articles { get; set; }
+    
+    protected override async Task OnInitializedAsync()
+    {
+        Articles = await Http.GetFromJsonAsync<Article[]>("articles.json");
+    }
 }    

@@ -1,0 +1,20 @@
+@using SociedadeTecnologia.Models
+<MudCard>
+    <MudCardMedia Image=@Article.ImagePath Alt="Tecnologias assistivas" Fluid="true" ObjectFit="ObjectFit.Cover"/>
+    <MudCardContent>
+        <MudText Typo="Typo.h5">@Article.Title</MudText>
+        <MudText Typo="Typo.body2">@Article.Lead</MudText>
+    </MudCardContent>
+    <MudCardActions>
+        <MudLink Href=@Article.Path Underline="Underline.None" Color="Color.Secondary" Class="mr-4">Leia mais</MudLink>
+        <MudSpacer />
+        <AuthorComponent Author=@Article.Author/>
+    </MudCardActions>
+</MudCard>
+
+@code
+{
+    [Parameter]
+    public Article Article { get; set; } = new Article("", "", "", "",
+        new Author("", "", "", ""));
+}
