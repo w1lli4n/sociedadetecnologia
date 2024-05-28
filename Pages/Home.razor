@@ -1,4 +1,5 @@
 ﻿@page "/"
+@inject HttpClient Http
 @using SociedadeTecnologia.Components
 @using SociedadeTecnologia.Models
 
@@ -6,28 +7,28 @@
 
 <HeroComponent />
 
-<MainArticleCardComponent Article=@_mainArticle />
-
-<div class="d-flex my-6 flex-wrap flex-md-nowrap gap-4">
-    @for (int i = 0; i < 3; i++)
-    {
-        <ArticleCardComponent Article=@_sideArticle/>
-    }
-</div>
+@if (@Articles is null)
+{
+    <h1>Carregando...</h1>
+}
+else
+{
+    <MainArticleCardComponent Article=@Articles[0] />
+    
+    <div class="d-flex my-6 flex-wrap flex-md-nowrap gap-4 justify-space-between" style="flex: 0 0 33.3333%;">
+        @for (int i = 1; i < 4; i++)
+        {
+            <ArticleCardComponent Article=@Articles[i]/>
+        }
+    </div>
+}
 
 @code
 {
-    private readonly Article _mainArticle = new Article(
-        "Entrevista com Polliany, desenvolvedora na Tix",
-        "Lorem ipsum dolor sit amet consectetur radicalising elit. Distinct aliquot disciple repeat excitation amet, nam similitude dedent doldrums quits, mod ill sure dispenser voluptuary fugal voluptuary laborer. Dolores, accuseds non.",
-        "/artigos/sample",
-        "images/articles/tecnologias-assistivas.jpeg",
-        new Author());
+    private Article[]? Articles { get; set; }
     
-    private readonly Article _sideArticle = new Article(
-        "Outro artigo",
-        "Lorem ipsum dolor sit amet consectetur radicalising elit. Distinct aliquot disciple repeat excitation amet, nam similitude dedent doldrums quits, mod ill sure dispenser voluptuary fugal voluptuary laborer. Dolores, accuseds non.",
-        "/artigos/#",
-        "images/articles/tecnologias-assistivas.jpeg",
-        new Author());
+    protected override async Task OnInitializedAsync()
+    {
+        Articles = await Http.GetFromJsonAsync<Article[]>("articles.json");
+    }
 }
