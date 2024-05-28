@@ -1,4 +1,4 @@
-@using SociedadeTecnologia.Entities
+@using SociedadeTecnologia.Models
 <MudItem>
     <MudAvatar>
         <MudImage Src=@Author.AvatarPath Alt="autor"></MudImage>
@@ -16,5 +16,5 @@
 @code 
 {
     [Parameter]
-    public Author Author { get; set; } = new Author("", "", "");
+    public Author Author { get; set; } = new Author();
 }

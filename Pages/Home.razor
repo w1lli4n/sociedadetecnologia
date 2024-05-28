@@ -1,15 +1,33 @@
 ﻿@page "/"
 @using SociedadeTecnologia.Components
+@using SociedadeTecnologia.Models
 
 <PageTitle>Home</PageTitle>
 
-<Hero />
+<HeroComponent />
 
-<MainCard Title="Entrevista com -----" />
+<MainArticleCardComponent Article=@_mainArticle />
 
 <div class="d-flex my-6 flex-wrap flex-md-nowrap gap-4">
-    <ArticleCards />
-    <ArticleCards />
-    <ArticleCards />
+    @for (int i = 0; i < 3; i++)
+    {
+        <ArticleCardComponent Article=@_sideArticle/>
+    }
 </div>
 
+@code
+{
+    private readonly Article _mainArticle = new Article(
+        "Entrevista com Polliany, desenvolvedora na Tix",
+        "Lorem ipsum dolor sit amet consectetur radicalising elit. Distinct aliquot disciple repeat excitation amet, nam similitude dedent doldrums quits, mod ill sure dispenser voluptuary fugal voluptuary laborer. Dolores, accuseds non.",
+        "/artigos/sample",
+        "images/articles/tecnologias-assistivas.jpeg",
+        new Author());
+    
+    private readonly Article _sideArticle = new Article(
+        "Outro artigo",
+        "Lorem ipsum dolor sit amet consectetur radicalising elit. Distinct aliquot disciple repeat excitation amet, nam similitude dedent doldrums quits, mod ill sure dispenser voluptuary fugal voluptuary laborer. Dolores, accuseds non.",
+        "/artigos/#",
+        "images/articles/tecnologias-assistivas.jpeg",
+        new Author());
+}

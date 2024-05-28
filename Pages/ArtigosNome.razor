@@ -1,22 +1,25 @@
 @page "/artigos/{name}"
 @inject HttpClient Http
 @using SociedadeTecnologia.Components
-@using SociedadeTecnologia.Entities
+@using SociedadeTecnologia.Models
 
-@if(@article is null)
+@if(@Article is null)
 {
     <h1>404 - Página não encontrada</h1>
 }
 else
 {
+    <MudContainer MaxWidth="MaxWidth.Medium">
+        <MudImage Src=@Article.ImagePath Fluid="true" />
+    </MudContainer>
     <MudText Typo="Typo.h4">
-        @article.Title
+        @Article.Title
     </MudText>
     <MudText Typo="Typo.h6">
-        @article.Lead
+        @Article.Lead
     </MudText>
-    <div>@((MarkupString)article.HtmlText)</div>
-    <AuthorComponent Author=@article.Author/>
+    <div>@((MarkupString)Article.HtmlText)</div>
+    <AuthorComponent Author=@Article.Author/>
 }
     
 
@@ -24,23 +27,20 @@ else
 {
     [Parameter]
     public string? Name { get; set; }
-    public Article? article { get; set; }
+    private Article? Article { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
         var articles = await Http.GetFromJsonAsync<Article[]>("articles.json");
-        
-        if(articles != null)
-            article = articles.FirstOrDefault<Article>();
+
+        if (articles != null)
+        {
+            foreach (var article in articles)
+            {
+                if (article.Title == Name)
+                    Article = article;
+            }
+        }
+            
     }
-
-
-    public class Article
-    {
-        public string? Title { get; set; }
-        public string? Lead { get; set; }
-        public string HtmlText { get; set; } = "";
-        public Author Author { get; set; } = new Author("", "", "", "", "");
-    }
-
 }

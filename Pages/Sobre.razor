@@ -1,6 +1,6 @@
 @page "/sobre"
 @using SociedadeTecnologia.Components
-@using SociedadeTecnologia.Entities;
+@using SociedadeTecnologia.Models
 
 <MudText Typo="Typo.h2">
     Sobre o projeto
@@ -12,10 +12,10 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi voluptates nulla
 <MudText Typo="Typo.h2">
     Sobre os autores
 </MudText>
-<AuthorCard Author=@Author/>
-<AuthorCard />
-<AuthorCard />
-<AuthorCard />
+<AuthorCardComponent Author=@Author/>
+<AuthorCardComponent />
+<AuthorCardComponent />
+<AuthorCardComponent />
 
 @code
 {

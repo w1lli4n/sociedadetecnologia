@@ -1,4 +1,4 @@
-﻿namespace SociedadeTecnologia.Entities;
+﻿namespace SociedadeTecnologia.Models;
 
 public class Author(string? name = "", string? about = "", string? description = "", string? avatarPath = "", string? imagePath = "")
 {
