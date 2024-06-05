@@ -1,10 +1,6 @@
 @using SociedadeTecnologia.Models
 <MudItem>
-    <MudAvatar>
-        <MudImage Src=@Author.AvatarPath Alt="autor"></MudImage>
-    </MudAvatar>
-
-    <MudText Typo="Typo.button">
+    <MudText Typo="Typo.h6">
         <strong>@Author.Name</strong>
     </MudText>
 
@@ -16,5 +12,5 @@
 @code 
 {
     [Parameter]
-    public Author Author { get; set; } = new Author("", "", "", "");
+    public Author Author { get; set; } = new Author("", "");
 }
