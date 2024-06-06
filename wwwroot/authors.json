@@ -1,18 +1,18 @@
 [
   {
     "name": "Juan Marques",
-    "about": "Aspirante a desenvolvedor backend C++",
+    "about": "Aspirante a desenvolvedor backend C++"
   },
   {
     "name": "Lucas Araújo",
-    "about": "Aspirante a desenvolvedor backend Python",
+    "about": "Aspirante a desenvolvedor backend Python"
   },
   {
     "name": "Murilo Roseni",
-    "about": "Aspirante a analista de dados",
+    "about": "Aspirante a analista de dados"
   },
   {
     "name": "Willian dos Santos",
-    "about": "Aspirante a desenvolvedor fullstack dotnet",
+    "about": "Aspirante a desenvolvedor fullstack dotnet"
   }
 ]
